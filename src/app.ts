@@ -9,8 +9,10 @@ app.use(cors())
 //parser
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
 //application routes
 app.use('/api/v1/users', usersRoute)
+
 //Testing
 app.get('/', async (req: Request, res: Response) => {
   await usersService.createUser({
